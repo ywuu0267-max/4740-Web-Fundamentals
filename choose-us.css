@@ -1,0 +1,184 @@
+:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --headerColor: #1a1a1a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-296 {
+    padding: var(--sectionPadding);
+  }
+
+  #services-296 .cs-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    /* changes to 1440px on desktop */
+    max-width: 43.75rem;
+    margin: auto;
+
+    /* 48px - 64px */
+
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  #services-296 .cs-title {
+    max-width: 30ch;
+  }
+
+  #services-296 .cs-card-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    /* 16px - 20px */
+
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+
+  #services-296 .cs-item {
+    position: relative;
+    z-index: 1;
+
+    /* clips image corners */
+
+    overflow: hidden;
+
+    /* prevents padding from adding to height and width */
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    list-style: none;
+    transition: background-color 0.3s;
+    text-align: left;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+  }
+
+  #services-296 .cs-item:hover {
+    cursor: pointer;
+  }
+
+  #services-296 .cs-item:hover .cs-image {
+    opacity: 1;
+  }
+
+  #services-296 .cs-item:hover .cs-image img {
+    transform: scale(1.1);
+  }
+
+  #services-296 .cs-item:hover .cs-h3,
+  #services-296 .cs-item:hover .cs-item-text {
+    color: #fff;
+  }
+
+  #services-296 .cs-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+    opacity: 0;
+    background-color: var(--primary);
+  }
+
+  #services-296 .cs-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    opacity: 0.4;
+    object-fit: cover;
+  }
+
+  #services-296 .cs-link {
+    text-decoration: none;
+  }
+
+  #services-296 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+    color: var(--headerColor);
+  }
+
+  #services-296 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    transition: color 0.3s;
+    color: var(--bodyTextColor);
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-296 .cs-card-group {
+    /* makes sure every box "stretches" to be the same height as the tallest box */
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #services-296 .cs-item {
+    width: 48.6%;
+  }
+}
+
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #services-296 .cs-container {
+    max-width: 90rem;
+  }
+
+  #services-296 .cs-card-group {
+    justify-content: center;
+  }
+
+  #services-296 .cs-item {
+    /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 22.5vw or 23% to get the desired sizes fit 4 in a row and then stack when you add more */
+    width: clamp(23.84%, 22.5vw, 23.95%);
+  }
+}
