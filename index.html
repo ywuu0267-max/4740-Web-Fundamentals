@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="choose-us.css" />
+    <link rel="stylesheet" href="./choose-us.css" />
     <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   </head>
@@ -21,7 +21,7 @@
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-left">
-          <a href="tel:0432299095">
+          <a href="tel:0432299095" aria-label="Call 0432299095">
             <svg
               viewBox="0 0 1024 1024"
               version="1.1"
@@ -37,7 +37,10 @@
             </svg>
             <span>0432299095</span>
           </a>
-          <a href="mailto:info@inforprotech.com.au">
+          <a
+            href="mailto:info@inforprotech.com.au"
+            aria-label="Email info@inforprotech.com.au"
+          >
             <svg
               viewBox="0 0 1024 1024"
               version="1.1"
@@ -54,17 +57,19 @@
             <span>info@inforprotech.com.au</span>
           </a>
         </div>
-        <a class="topbar-right" href="#">Get a Quote</a>
+        <a class="topbar-right" href="#" role="button" aria-label="Get a Quote"
+          >Get a Quote</a
+        >
       </div>
     </div>
 
     <!-- Header -->
     <header class="header">
       <div class="container header-inner">
-        <a href="/">
-          <img src="./images/logo.webp" alt="InforProTech" />
+        <a href="/" aria-label="InforProTech Home">
+          <img src="./images/logo.webp" alt="InforProTech Logo" />
         </a>
-        <div class="nav-inner">
+        <nav class="nav-inner" role="navigation" aria-label="Main Navigation">
           <ul class="nav-list">
             <li><a class="nav-link" href="#">Home</a></li>
             <li><a class="nav-link" href="#">About Us</a></li>
@@ -92,7 +97,7 @@
               />
             </svg>
           </button>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -100,12 +105,15 @@
     <section class="hero">
       <div class="container">
         <div class="image-container">
-          <img src="./images/desktop/hero.webp" alt="InforProTech" />
+          <img
+            src="./images/desktop/hero.webp"
+            alt="Web design for small businesses"
+          />
         </div>
         <div class="hero-text">
           <p>eminent web agencies in Dandenong</p>
           <h1>Web page design for small businesses</h1>
-          <a class="btn" href="#">Get started now</a>
+          <a class="btn" href="#" role="button">Get started now</a>
         </div>
       </div>
     </section>
@@ -200,14 +208,12 @@
         <h2 class="section-title">Choose Us</h2>
         <ul class="cs-card-group">
           <li class="cs-item">
-            <a class="cs-link" href="">
+            <a class="cs-link" href="#">
               <svg
-                t="1756906745511"
-                class="icon"
+                fill="currentColor"
                 viewBox="0 0 1024 1024"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                p-id="2349"
                 width="48"
                 height="48"
               >
@@ -216,7 +222,6 @@
                   p-id="2350"
                 ></path>
               </svg>
-
               <h3 class="cs-h3">About Price</h3>
               <p class="cs-item-text">
                 Our pricing structure is completely transparent with no hidden
@@ -227,16 +232,16 @@
             <picture class="cs-image" aria-hidden="true">
               <source
                 media="(max-width: 600px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/mobile/about-price.webp"
               />
               <source
                 media="(min-width: 601px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/desktop/about-price.webp"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src="./images/desktop/laptop.webp"
+                src="./images/desktop/about-price.webp"
                 alt="laptop"
                 width="413"
                 height="266"
@@ -244,20 +249,17 @@
             </picture>
           </li>
           <li class="cs-item">
-            <a href="" class="cs-link">
+            <a href="#" class="cs-link">
               <svg
-                t="1756907062853"
-                class="icon"
+                fill="currentColor"
                 viewBox="0 0 1024 1024"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                p-id="3607"
                 width="48"
                 height="48"
               >
                 <path
                   d="M272 85.312v853.376h480V85.312h-480zM232 0h560c22.08 0 40 19.072 40 42.688v938.624c0 23.616-17.92 42.688-40 42.688h-560C209.92 1024 192 1004.928 192 981.312V42.688C192 19.072 209.92 0 232 0z m40 810.688h480v170.624h-480v-170.624z m240 128c22.08 0 40-19.136 40-42.688 0-23.552-17.92-42.688-40-42.688s-40 19.136-40 42.688c0 23.552 17.92 42.688 40 42.688z"
-                  fill="#262626"
                   p-id="3608"
                 ></path>
               </svg>
@@ -271,16 +273,16 @@
             <picture class="cs-image" aria-hidden="true">
               <source
                 media="(max-width: 600px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/mobile/mobile-friendly.webp"
               />
               <source
                 media="(min-width: 601px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/desktop/mobile-friendly.webp"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src="./images/desktop/laptop.webp"
+                src="./images/desktop/mobile-friendly.webp"
                 alt="laptop"
                 width="413"
                 height="266"
@@ -288,20 +290,17 @@
             </picture>
           </li>
           <li class="cs-item">
-            <a href="" class="cs-link">
+            <a href="#" class="cs-link">
               <svg
-                t="1756907224973"
-                class="icon"
+                fill="currentColor"
                 viewBox="0 0 1024 1024"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                p-id="6843"
                 width="48"
                 height="48"
               >
                 <path
                   d="M512 85.333333c235.648 0 426.666667 191.018667 426.666667 426.666667s-191.018667 426.666667-426.666667 426.666667S85.333333 747.648 85.333333 512 276.352 85.333333 512 85.333333z m0 61.781334a364.885333 364.885333 0 1 0 0 729.770666 364.885333 364.885333 0 0 0 0-729.770666z m128.341333 197.845333a30.890667 30.890667 0 0 1 38.698667 38.698667l-65.578667 209.578666a30.890667 30.890667 0 0 1-20.224 20.224l-209.578666 65.578667a30.890667 30.890667 0 0 1-38.698667-38.698667l65.578667-209.578666a30.890667 30.890667 0 0 1 20.224-20.224z m-37.888 76.544l-137.813333 43.136-43.136 137.813333 137.813333-43.136 43.136-137.813333z"
-                  fill="#2c2c2c"
                   p-id="6844"
                 ></path>
               </svg>
@@ -316,16 +315,16 @@
             <picture class="cs-image" aria-hidden="true">
               <source
                 media="(max-width: 600px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/mobile/elegant-discovery.webp"
               />
               <source
                 media="(min-width: 601px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/desktop/elegant-discovery.webp"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src="./images/desktop/laptop.webp"
+                src="./images/desktop/elegant-discovery.webp"
                 alt="laptop"
                 width="413"
                 height="266"
@@ -333,21 +332,18 @@
             </picture>
           </li>
           <li class="cs-item">
-            <a class="cs-link" href="">
+            <a class="cs-link" href="#">
               <svg
-                t="1756907173861"
-                class="icon"
+                fill="currentColor"
                 viewBox="0 0 1024 1024"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                p-id="5555"
                 width="48"
                 height="48"
               >
                 <path
                   d="M896 554.666667v170.666666a85.333333 85.333333 0 0 1-85.333333 85.333334v42.666666a128 128 0 0 1-128 128h-128a42.666667 42.666667 0 0 1-42.666667-42.666666v-21.333334a21.333333 21.333333 0 0 1 21.333333-21.333333H682.666667a42.666667 42.666667 0 0 0 42.666666-42.666667v-42.666666a42.666667 42.666667 0 0 1-42.666666-42.666667v-256a42.666667 42.666667 0 0 1 42.666666-42.666667V341.333333A213.333333 213.333333 0 0 0 298.666667 341.333333v128a42.666667 42.666667 0 0 1 42.666666 42.666667v256a42.666667 42.666667 0 0 1-42.666666 42.666667H213.333333a85.333333 85.333333 0 0 1-85.333333-85.333334v-170.666666a85.333333 85.333333 0 0 1 85.333333-85.333334V341.333333a298.666667 298.666667 0 0 1 597.333334 0v128a85.333333 85.333333 0 0 1 85.333333 85.333334z"
                   p-id="5556"
-                  fill="#2c2c2c"
                 ></path>
               </svg>
               <h3 class="cs-h3">Fast Support</h3>
@@ -361,16 +357,16 @@
             <picture class="cs-image">
               <source
                 media="(max-width: 600px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/mobile/fast-support.webp"
               />
               <source
                 media="(min-width: 601px)"
-                srcset="./images/desktop/laptop.webp"
+                srcset="./images/desktop/fast-support.webp"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src="./images/desktop/laptop.webp"
+                src="./images/desktop/fast-support.webp"
                 alt="laptop"
                 width="413"
                 height="266"
@@ -386,7 +382,7 @@
       <div class="container">
         <h2 class="section-title">Contact Us</h2>
         <p class="section-lead">
-          Tell us about your website needs. We usually reply within 1–2 business
+          Tell us about your website needs. We usually reply within 1-2 business
           days.
         </p>
 
@@ -412,11 +408,20 @@
             <p class="contact-note">Business hours: Mon-Fri, 9:00-17:00 AEST</p>
           </div>
 
-          <form id="contact-form" class="contact-form" novalidate>
+          <form
+            id="contact-form"
+            class="contact-form"
+            aria-label="Contact Form"
+          >
+            <div
+              id="form-alert"
+              class="form-alert is-hidden"
+              role="alert"
+            ></div>
             <div class="form-row">
-              <label for="cf-name">Name</label>
+              <label for="name">Name</label>
               <input
-                id="cf-name"
+                id="name"
                 name="name"
                 type="text"
                 placeholder="Your name"
@@ -424,9 +429,9 @@
               />
             </div>
             <div class="form-row">
-              <label for="cf-email">Email</label>
+              <label for="email">Email</label>
               <input
-                id="cf-email"
+                id="email"
                 name="email"
                 type="email"
                 placeholder="you@example.com"
@@ -434,9 +439,9 @@
               />
             </div>
             <div class="form-row">
-              <label for="cf-msg">Message</label>
+              <label for="message">Message</label>
               <textarea
-                id="cf-msg"
+                id="message"
                 name="message"
                 rows="5"
                 placeholder="Tell us what you need…"
@@ -452,8 +457,8 @@
     </section>
 
     <!-- Footer -->
-    <footer id="site-footer" class="footer">
-      <div class="container footer__grid">
+    <footer class="footer">
+      <div class="container footer-grid">
         <div>
           <h3>Inforprotech</h3>
           <p>
@@ -479,9 +484,7 @@
           </p>
         </div>
       </div>
-      <div class="footer__bottom">
-        © 2025 Inforprotech. All rights reserved.
-      </div>
+      <div class="footer-bottom">© 2025 Inforprotech. All rights reserved.</div>
     </footer>
 
     <script src="script.js"></script>

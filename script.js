@@ -12,32 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleBtn.setAttribute('aria-expanded', String(!expanded))
     toggleBtn.textContent = expanded ? 'And more' : 'Show less'
   })
-})
 
-function toggleList(selector) {
-  document.querySelectorAll(selector).forEach((el) => {
-    el.classList.toggle('is-hidden')
-  })
-}
+  const contactForm = document.getElementById('contact-form')
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const name = contactForm.querySelector('#name').value.trim()
+      const email = contactForm.querySelector('#email').value.trim()
+      const message = contactForm.querySelector('#message').value.trim()
+      const alertBox = document.getElementById('form-alert')
 
-const cf = document.getElementById('contact-form')
-if (cf) {
-  cf.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const name = cf.querySelector('#cf-name').value.trim()
-    const email = cf.querySelector('#cf-email').value.trim()
-    const msg = cf.querySelector('#cf-msg').value.trim()
-    const alertBox = document.getElementById('form-alert')
-
-    if (!name || !email || !msg) {
-      alertBox.textContent = '⚠️ Please fill out all fields.'
+      if (!name || !email || !message) {
+        alertBox.textContent = 'Please fill out all fields.'
+        alertBox.classList.remove('is-hidden')
+        alertBox.classList.add('error')
+        return
+      }
+      alertBox.textContent = 'Thanks! Your message has been sent.'
       alertBox.classList.remove('is-hidden')
-      alertBox.style.color = '#b45309'
-      return
-    }
-    alertBox.textContent = '✅ Thanks! Your message has been noted.'
-    alertBox.classList.remove('is-hidden')
-    alertBox.style.color = '#16a34a'
-    cf.reset()
-  })
-}
+      alertBox.classList.remove('error')
+      alertBox.classList.add('success')
+      contactForm.reset()
+    })
+  }
+})

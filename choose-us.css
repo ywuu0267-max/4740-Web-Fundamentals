@@ -99,6 +99,7 @@ body {
     transform: scale(1.1);
   }
 
+  #services-296 .cs-item:hover svg,
   #services-296 .cs-item:hover .cs-h3,
   #services-296 .cs-item:hover .cs-item-text {
     color: #fff;
@@ -130,6 +131,10 @@ body {
 
   #services-296 .cs-link {
     text-decoration: none;
+  }
+
+  #services-296 svg {
+    color: var(--headerColor);
   }
 
   #services-296 .cs-h3 {
